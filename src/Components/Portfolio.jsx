@@ -13,7 +13,7 @@ class Portfolio extends React.Component {
             {
                 name: 'Relax',
                 URL: 'https://tamerlan620.github.io/Test9',
-                Picture: '../Pics/2.jpg'
+                Picture: './Pics/2.jpg'
 
             },
             {
@@ -50,7 +50,7 @@ class Portfolio extends React.Component {
                 {
                     MyProjects.map((Project) => (
                         <div className="Projects"><a href={Project.URL}>
-                            <img className="ProjectImg" src={Project.Picture} alt="" />
+                            <img className="ProjectImg" src={require(`${Project.Picture}`)} alt="" />
                         </a>
                             <h3 className="ProjectName">{Project.name}</h3>
                         </div>
